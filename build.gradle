@@ -1,0 +1,22 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+
+group = 'org.willprice'
+version = '0.0.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testCompile 'pl.pragmatists:JUnitParams:1.0.5'
+    testCompile 'junit:junit:4.12'
+}
