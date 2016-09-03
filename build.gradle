@@ -2,9 +2,14 @@ buildscript {
     repositories {
         mavenCentral()
     }
+    dependencies {
+        classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.1.10'
+    }
 }
 
 apply plugin: 'java'
+apply plugin: 'info.solidsoft.pitest'     // Mutation testing
+apply plugin: 'jacoco'                    // Test coverage
 
 group = 'org.willprice'
 version = '0.0.1'
