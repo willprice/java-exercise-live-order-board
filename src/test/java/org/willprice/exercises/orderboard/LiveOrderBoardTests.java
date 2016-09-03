@@ -92,7 +92,7 @@ public class LiveOrderBoardTests {
                         Arrays.asList(300f, 305f)
                 },
                 new Object[] {
-                        Arrays.asList(new BuyOrder("EXAMPLE_USER", 1.0f, 300f), new SellOrder("EXAMPLE_USER", 1.0f, 305f)),
+                        Arrays.asList(new BuyOrder("EXAMPLE_USER", 1.0f, 300f), new BuyOrder("EXAMPLE_USER", 1.0f, 305f)),
                         Arrays.asList(305f, 300f)
                 },
         };
