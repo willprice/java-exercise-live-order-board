@@ -1,15 +1,8 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.1.10'
-    }
+plugins {
+  id "java"
+  id "jacoco"                                 // Test coverage
+  id "info.solidsoft.pitest" version "1.1.4"  // Mutation test coverage
 }
-
-apply plugin: 'java'
-apply plugin: 'info.solidsoft.pitest'     // Mutation testing
-apply plugin: 'jacoco'                    // Test coverage
 
 group = 'org.willprice'
 version = '0.0.1'
@@ -24,4 +17,11 @@ repositories {
 dependencies {
     testCompile 'pl.pragmatists:JUnitParams:1.0.5'
     testCompile 'junit:junit:4.12'
+}
+
+jacocoTestReport {
+    // XML test report is used for code coverage reporting
+    reports {
+        xml.enabled true
+    }
 }
