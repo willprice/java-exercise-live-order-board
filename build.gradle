@@ -25,3 +25,8 @@ jacocoTestReport {
         xml.enabled true
     }
 }
+
+pitest {
+    threads = 4
+    outputFormats = ['XML', 'HTML']
+}
